@@ -1,9 +1,9 @@
 <?php
-require_once 'protected/autoload.php';
+require_once 'protected/init.php';
 
 $out = array();
 
-$str = '3еz4';
+$str = '133+';
 $out['Leetify'][$str] = Leetify::decode($str);
 $str = 'leet';
 $out['Leetify'][$str] = Leetify::encode($str);
@@ -24,7 +24,7 @@ print_r($out);
 
 //Array (
 //    [Leetify] => Array (
-//        [3еz4] => eesaa
+//        [133+] => teet
 //        [leet] => leet
 //        )
 //    [LeetifySimple] => Array (
