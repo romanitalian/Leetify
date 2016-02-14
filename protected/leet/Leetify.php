@@ -64,12 +64,12 @@ class Leetify extends LeetifyAbstract
         $dict = $this->getDictionary();
         $chars = Utils::str_split_($this->string);
         if ($this->isEncode) {
-            for ($i = 0; $i < strlen($this->string); $i++) {
-                $char = (string)$chars[$i];
-                if (isset($dict[$char]) && (string)$dict[$char] === $char) {
+            foreach($chars as $char) {
+                if (isset($dict[$char])) {
                     $randomIndex = rand(0, count($dict[$char]));
                     $c = $dict[$char][$randomIndex];
                 } else {
+                    var_dump(__LINE__);
                     $c = $char;
                 }
                 $out .= $c;
@@ -77,8 +77,7 @@ class Leetify extends LeetifyAbstract
         } else {
             $t = array();
             $tt = '';
-            for ($i = 0; $i < strlen($this->string); $i++) {
-                $char = (string)$chars[$i];
+            foreach($chars as $char) {
                 foreach ($dict as $charDict => $rowDict) {
                     if (in_array($char, $rowDict, true)) {
                         $t[] = $charDict;
@@ -95,11 +94,3 @@ class Leetify extends LeetifyAbstract
         return $out;
     }
 }
-
-
-// m99k11 l33t — 3t0 0ch3n v35310.
-// «Мягкий leet — это очень весело»
-// Stfu n00b. I pwn3d j0r @ss.
-// «Shut the fuck up, noob. I owned your ass.»
-// 1 (4/\/"7 |_|/\/[)3|2574/\/[) \/0|_||2 \/\/|2171/\/9.17’5 (0/\/|=|_|51/\/9
-// «I can’t understand your writing. It’s confusing»

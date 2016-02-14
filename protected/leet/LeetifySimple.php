@@ -58,8 +58,7 @@ class LeetifySimple extends LeetifyAbstract
         }
         $chars = Utils::str_split_($this->string);
         $flippedDict = array_flip($dict); // for good performance
-        for ($i = 0; $i < strlen($this->string); $i++) {
-            $char = $chars[$i];
+        foreach($chars as $char) {
             $out .= isset($flippedDict[$char]) ? $leet[$flippedDict[$char]] : $char;
         }
         return $out;

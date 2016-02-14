@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class Utils
+ */
 class Utils
 {
     public static function str_split_($str) {
