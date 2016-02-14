@@ -1,11 +1,13 @@
 <?php
-require_once 'protected/init.php';
+require_once 'protected/autoload.php';
 
 $out = array();
 
 $str = '133+';
 $out['Leetify'][$str] = Leetify::decode($str);
 $str = 'leet';
+$out['Leetify'][$str] = Leetify::encode($str);
+$str = 'looks like this';
 $out['Leetify'][$str] = Leetify::encode($str);
 Leetify::getInstance()->destroy();
 
@@ -25,7 +27,7 @@ print_r($out);
 //Array (
 //    [Leetify] => Array (
 //        [133+] => teet
-//        [leet] => leet
+//        [leet] => 133+
 //        )
 //    [LeetifySimple] => Array (
 //        [english] => Array (
