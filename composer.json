@@ -1,0 +1,13 @@
+{
+    "name": "romanitalian/leetify",
+    "description": "Leetify your messages!",
+    "type": "composer",
+    "authors": [
+        {
+            "name": "romanitalian",
+            "email": "romanitalian.net@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
