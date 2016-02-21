@@ -1,4 +1,7 @@
 <?php
+use Leet\Leetify;
+use Leet\LeetifySimple;
+
 require_once 'protected/autoload.php';
 
 $out = array();
@@ -61,8 +64,8 @@ array (size=2)
       'terry' => string '+3rrj' (length=5)
       '3ез4' => string 'жезл' (length=8)
       'жезл' => string '3еz4' (length=5)
-      '«Мягкий leet — это очень весело»' => string '«Мя4кZй leet — это о|-|ен' весе4о»' (length=53)
+      '«Мягкий leet — это очень весело»' => string '«Мя4кZй 133+ — это о|-|ен' весе4о»' (length=53)
       'm99k11 l33t — 3t0 0ch3n v35310.' => string 'm99kфф lжжt — жtр рchжn vж5жфр.' (length=45)
       'Мя4кZй 133+ — это о|-|ен' весе4о' => string 'Мялкий фжжу — это о|-|ень весело' (length=57)
-      'Shut the fuck up, noob. I owned your ass.' => string 'Shut the fuck up, noob. I owned your ass.' (length=41)
+      'Shut the fuck up, noob. I owned your ass.' => string 'Zhu+ +h3 fuck up, n00b. I 0wn3d j0ur 4zz.' (length=41)
 */

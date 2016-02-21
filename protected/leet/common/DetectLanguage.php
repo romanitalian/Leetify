@@ -1,5 +1,7 @@
 <?php
 
+namespace Leet\Common;
+
 /**
  * Class DetectLanguage
  */

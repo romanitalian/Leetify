@@ -1,9 +1,11 @@
 <?php
 
+namespace Leet;
+
 /**
  * Class LeetifySimple
  */
-class LeetifySimple extends LeetifyBase
+class LeetifySimple extends Base\LeetifyBase
 {
     protected $dictType = 'simple';
     protected $dictionaryPath = 'dictionary.php';

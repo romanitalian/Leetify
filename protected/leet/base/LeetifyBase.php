@@ -1,5 +1,9 @@
 <?php
 
+namespace Leet\Base;
+use Leet\Common\Singleton;
+use Leet\Common\Utils;
+
 /**
  * Class LeetifyBase
  */

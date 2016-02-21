@@ -1,5 +1,7 @@
 <?php
 
+namespace Leet\Base;
+
 /**
  * Interface LeetifyInterface
  */
