@@ -1,6 +1,6 @@
 {
     "name": "romanitalian/leetify",
-    "description": "Leetify your messages!",
+    "description": "Leetify your messages! Leetify is a funny tool used to make any msgs like this: 'looks like this' -> '100kz 1ik3 +hiz'",
     "type": "composer",
     "authors": [
         {
