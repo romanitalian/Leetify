@@ -18,49 +18,51 @@ Leetify::getInstance()->destroy();
 
 
 $str = '133+';
-$out['LeetifySimple']['english'][$str] = LeetifySimple::decode($str);
+$out['LeetifySimple'][$str] = LeetifySimple::decode($str);
 
 $str = 'leet';
-$out['LeetifySimple']['english'][$str] = LeetifySimple::encode($str);
+$out['LeetifySimple'][$str] = LeetifySimple::encode($str);
 
 $str = 'terry';
-$out['LeetifySimple']['english'][$str] = LeetifySimple::encode($str);
-LeetifySimple::getInstance()->destroy();
+$out['LeetifySimple'][$str] = LeetifySimple::encode($str);
 
-$str = '3еz4';
-$out['LeetifySimple']['russian'][$str] = LeetifySimple::decode($str);
+$str = '3ез4';
+$out['LeetifySimple'][$str] = LeetifySimple::decode($str, 'cyrillic');
 
 $str = 'жезл';
-$out['LeetifySimple']['russian'][$str] = LeetifySimple::encode($str);
+$out['LeetifySimple'][$str] = LeetifySimple::encode($str);
 
-print_r($out);
+$str = '«Мягкий leet — это очень весело»';
+$out['LeetifySimple'][$str] = LeetifySimple::encode($str);
 
-//Array (
-//    [Leetify] => Array (
-//        [133+] => teet
-//        [leet] => |_€&7
-//        [looks like this] => |0Ø$ |eye1<|=- +(-)!2
-//        [terry] => †&l2|?λ
-//        )
-//    [LeetifySimple] => Array (
-//        [english] => Array (
-//            [133+] => leet
-//            [leet] => 133+
-//            [terry] => +3rrj
-//     )
-//        [russian] => Array (
-//            [3еz4] => жезл
-//            [жезл] => 3еz4
-//                )
-//        )
-//)
+$str = 'm99k11 l33t — 3t0 0ch3n v35310.';
+$out['LeetifySimple'][$str] = LeetifySimple::decode($str, 'cyrillic');
 
+$str = "Мя4кZй 133+ — это о|-|ен' весе4о";
+$out['LeetifySimple'][$str] = LeetifySimple::decode($str);
 
+$str = 'Shut the fuck up, noob. I owned your ass.';
+$out['LeetifySimple'][$str] = LeetifySimple::encode($str);
 
-// m99k11 l33t — 3t0 0ch3n v35310.
-// «Мягкий leet — это очень весело»
-// Stfu n00b. I pwn3d j0r @ss.
-// «Shut the fuck up, noob. I owned your ass.»
-// 1 (4/\/"7 |_|/\/[)3|2574/\/[) \/0|_||2 \/\/|2171/\/9.17’5 (0/\/|=|_|51/\/9
-// «I can’t understand your writing. It’s confusing»
+var_dump($out);
 
+/*
+array (size=2)
+  'Leetify' =>
+    array (size=4)
+      '133+' => string 'teet' (length=4)
+      'leet' => string '|33t' (length=4)
+      'looks like this' => string 'ВЈ<>o1<§ £eye|cə †}-{][2' (length=31)
+      'terry' => string '~|~|=-|2|2'/' (length=12)
+  'LeetifySimple' =>
+    array (size=9)
+      '133+' => string 'фжжу' (length=8)
+      'leet' => string '133+' (length=4)
+      'terry' => string '+3rrj' (length=5)
+      '3ез4' => string 'жезл' (length=8)
+      'жезл' => string '3еz4' (length=5)
+      '«Мягкий leet — это очень весело»' => string '«Мя4кZй leet — это о|-|ен' весе4о»' (length=53)
+      'm99k11 l33t — 3t0 0ch3n v35310.' => string 'm99kфф lжжt — жtр рchжn vж5жфр.' (length=45)
+      'Мя4кZй 133+ — это о|-|ен' весе4о' => string 'Мялкий фжжу — это о|-|ень весело' (length=57)
+      'Shut the fuck up, noob. I owned your ass.' => string 'Shut the fuck up, noob. I owned your ass.' (length=41)
+*/

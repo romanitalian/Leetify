@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Class LeetifyAbstract
+ * Interface LeetifyInterface
  */
 Interface LeetifyInterface
 {
