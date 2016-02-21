@@ -31,7 +31,7 @@ $str = '3еz4';
 $out['LeetifySimple']['russian'][$str] = LeetifySimple::decode($str);
 
 $str = 'жезл';
-$out['LeetifySimple']['russian'][$str] = LeetifySimple::decode($str);
+$out['LeetifySimple']['russian'][$str] = LeetifySimple::encode($str);
 
 print_r($out);
 
@@ -50,7 +50,7 @@ print_r($out);
 //     )
 //        [russian] => Array (
 //            [3еz4] => жезл
-//            [жезл] => жезл
+//            [жезл] => 3еz4
 //                )
 //        )
 //)
