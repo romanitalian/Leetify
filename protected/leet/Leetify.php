@@ -69,7 +69,6 @@ class Leetify extends LeetifyAbstract
                     $randomIndex = rand(0, count($dict[$char]));
                     $c = $dict[$char][$randomIndex];
                 } else {
-                    var_dump(__LINE__);
                     $c = $char;
                 }
                 $out .= $c;
