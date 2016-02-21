@@ -2,6 +2,16 @@
 
 Leetify is a funny tool used to make any msgs like this: "looks like this" -> "100kz 1ik3 +hiz"
 
+You can use composer scripts to invoke this package - Leetify.
+Just add it to you composer.json:
+    ...
+    "require": {
+        "romanitalian/leetify": "dev-master"
+    }
+    ...
+Or after init composer - execute this:
+> composer require romanitalian/leetify
+
 ```php
 <?php
 use Leet\Leetify;
