@@ -1,6 +1,6 @@
 # Leetify
 
-Leetify is a funny tool used to make your text "looks like this" -> "|0Ø$ |eye1<|=- +(-)!2"
+Leetify is a funny tool used to make any msgs like this: "looks like this" -> "|0Ø$ |eye1<|=- +(-)!2"
 
 ```php
 <?php
@@ -61,3 +61,5 @@ Array (
         )
 )
 ```
+
+
